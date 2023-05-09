@@ -33,8 +33,10 @@ func main() {
 	p.RegisterEventHandler(func(e events.ChatMessage) {
 		words := strings.Fields(e.Text)
 		for _, word := range words {
+			wordSlice := strings.Trim(word, ",.!?;:()[]{}")
+			finalWord := strings.ToLower(wordSlice)
 			if len(word) > 3 {
-				fmt.Printf("%s%s", word, *delimiter)
+				fmt.Printf("%s%s", finalWord, *delimiter)
 			}
 		}
 	})
