@@ -21,7 +21,7 @@ func main() {
 	flag.Parse()
 	f, err := os.Open(*input)
 	if err != nil {
-		fmt.Printf("failed to open demo file %s\n", *input)
+		fmt.Fprintf(os.Stderr, "failed to open demo file %s\n", *input)
 		panic(err)
 	}
 	defer f.Close()
@@ -33,9 +33,9 @@ func main() {
 	p.RegisterEventHandler(func(e events.ChatMessage) {
 		words := strings.Fields(e.Text)
 		for _, word := range words {
-			wordSlice := strings.Trim(word, ",.!?;:()[]{}")
+			wordSlice := strings.Trim(word, "/#,.!?;:()[]{}'-")
 			finalWord := strings.ToLower(wordSlice)
-			if len(word) > 3 {
+			if len(finalWord) > 1 && len(finalWord) < 20 && !strings.Contains(finalWord, "the") && !strings.ContainsAny(finalWord, ",.!?;:()[]{}'") {
 				fmt.Printf("%s%s", finalWord, *delimiter)
 			}
 		}
