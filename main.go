@@ -33,9 +33,9 @@ func main() {
 	p.RegisterEventHandler(func(e events.ChatMessage) {
 		words := strings.Fields(e.Text)
 		for _, word := range words {
-			wordSlice := strings.Trim(word, "/#,.!?;:()[]{}'-")
+			wordSlice := strings.Trim(word, "+/#,.!?;:()[]{}'-")
 			finalWord := strings.ToLower(wordSlice)
-			if len(finalWord) > 1 && len(finalWord) < 20 && !strings.Contains(finalWord, "the") && !strings.ContainsAny(finalWord, ",.!?;:()[]{}'") {
+			if len(finalWord) > 1 && len(finalWord) < 20 && !strings.Contains(finalWord, "the") && !strings.ContainsAny(finalWord, "+,.!?;:()[]{}'") {
 				fmt.Printf("%s%s", finalWord, *delimiter)
 			}
 		}
