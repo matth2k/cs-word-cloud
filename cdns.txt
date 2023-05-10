@@ -1,0 +1,4 @@
+https://storage.googleapis.com/demos-us-central1.faceit-cdn.net
+https://storage.googleapis.com/demos-europe-west1.faceit-cdn.net
+https://storage.googleapis.com/demos-europe-west2.faceit-cdn.net
+https://storage.googleapis.com/demos-asia-southeast1.faceit-cdn.net
