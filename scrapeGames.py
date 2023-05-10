@@ -23,7 +23,8 @@ def getPlayerMatch(playerId, apiKey):
 
 def getNextMatch(matchJson, apiKey):
     faction = random.choice(["faction1", "faction2"])
-    playerIndex = random.randint(0, 4)
+    roster = matchJson["teams"][faction]["roster"]
+    playerIndex = random.randint(0, len(roster)-1)
     playerId = matchJson["teams"][faction]["roster"][playerIndex]["player_id"]
     return getPlayerMatch(playerId, apiKey)
 
@@ -38,6 +39,6 @@ if __name__ == "__main__":
     apiKey = args.apiKey
     count = 0
     while count < args.numMatches:
-        print(f"{cMatch}")
+        print(f"{cMatch}", flush=True, end="\n")
         cMatch = getNextMatch(pullMatch(cMatch, apiKey), apiKey)
         count += 1
