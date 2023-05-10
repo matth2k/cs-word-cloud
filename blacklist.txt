@@ -11,3 +11,6 @@ can
 on
 for
 to
+switch
+stay
+pause
