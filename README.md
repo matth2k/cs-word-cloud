@@ -56,12 +56,12 @@ The `download.sh` script already handles the demo request automatically given `c
 
 ## Step 3: Parse the words
 
-All I had to do was write a small method in Go using the API provided from https://github.com/markus-wa/demoinfocs-golang. It dumps all the chat text to `stdout`. Then I just `cat` them together for the word cloud generator.
+All I had to do was write a small method in Go in `main.go` using the API provided from https://github.com/markus-wa/demoinfocs-golang. It dumps all the chat text to `stdout`. Then I just `cat` them together for the word cloud generator.
 
 ## Step 4: Generate the word cloud
 
-I mainly followed this example here https://github.com/amueller/word_cloud/blob/main/examples/masked.py. I made my own stencil with GIMP and played around with the parameters.
+I mainly followed this example here https://github.com/amueller/word_cloud/blob/main/examples/masked.py. I made my own stencil with GIMP and played around with the parameters. You can see the parameters I chose in `csgoman.py`.
 
-# Using this work to download large collections of demos
+# Using this work to download large CSGO datasets
 
-The scripts in this repo may be of interest for those doing data science / statistics on CSGO games on the general population. Just use `scrapeGames.py` and `download.sh` scripts, and you should be able to get pretty large datasets in no time. I was able to get 1000 demos using 150GB and only a handful of hours.
+The scripts in this repo may be of interest for those doing data science / statistics on CSGO games on the general population of players. Just use `scrapeGames.py` and `download.sh` scripts, and you should be able to get pretty large datasets in no time. I was able to get 1000 demos using 150GB and only a handful of hours.
