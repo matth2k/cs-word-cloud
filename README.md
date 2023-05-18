@@ -24,8 +24,8 @@ SHELL=/bin/bash # Need this just so I can use pipefail :/
 
 After:
 ```
-APIKEY?=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx # Add server api key here from https://developers.faceit.com/
-INITMATCH?=1-a993a412-8987-4d11-a682-dbe2fae3a761 # Add any recent faceit match ID here 
+APIKEY?=xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx # Keep this a secret
+INITMATCH?=1-a993a412-8987-4d11-a682-dbe2fae3a761 
 MATCH_COUNT=5 # Let's only do 5 demos for a short test
 SHELL=/bin/zsh # Say I have a macbook lets use zsh
 ```
