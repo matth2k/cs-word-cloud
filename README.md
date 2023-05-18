@@ -62,6 +62,6 @@ All I had to do was write a small method in Go in `main.go` using the API provid
 
 I mainly followed this example here https://github.com/amueller/word_cloud/blob/main/examples/masked.py. I made my own stencil with GIMP and played around with the parameters. You can see the parameters I chose in `csgoman.py`.
 
-# Using this work to download large CSGO datasets
+# Using this work to make new large CSGO datasets
 
 The scripts in this repo may be of interest for those doing data science / statistics on CSGO games on the general population of players. Just use `scrapeGames.py` and `download.sh` scripts, and you should be able to get pretty large datasets in no time. I was able to get 1000 demos using 150GB and only a handful of hours.
