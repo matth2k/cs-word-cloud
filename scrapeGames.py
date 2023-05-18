@@ -4,8 +4,6 @@ import requests
 import json
 import random
 
-# curl -X GET "https://open.faceit.com/data/v4/players?nickname=mrmatthew2k&game=csgo" -H "accept: application/json" -H "Authorization: Bearer 68bbc795-8a18-478e-8da0-79a639fb6540"
-
 def pullMatch(matchID, apiKey):
     
     url = f"https://open.faceit.com/data/v4/matches/{matchID}"
