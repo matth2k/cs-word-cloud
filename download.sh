@@ -21,4 +21,3 @@ fi
 
 gzip -f -d $ARCHIVE
 ../cs-word-cloud -delimiter ', ' -input $DEMO > ${NAME}_words.txt
-../weapon -delimiter ', ' -input $DEMO > ${NAME}_weapons.txt

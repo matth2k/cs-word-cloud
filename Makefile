@@ -8,9 +8,12 @@ all: word_cloud.png
 word_cloud.png: words.txt
 	python3 csgoman.py
 
-words.txt: matches.txt
+words.txt: matches.txt cs-word-cloud
 	mkdir -p demos
 	./makeWords.sh
+
+cs-word-cloud:
+	go build
 
 matches.txt:
 	rm -f $@
@@ -18,4 +21,4 @@ matches.txt:
 	python3 scrapeGames.py -s $(INITMATCH) -k $(APIKEY) -n $(MATCH_COUNT) | tee -a $@
 
 clean:
-	rm -f matches.txt words.txt word_cloud.png demos
+	rm -f matches.txt words.txt word_cloud.png demos cs-word-cloud
