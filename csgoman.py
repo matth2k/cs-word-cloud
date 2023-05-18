@@ -90,12 +90,12 @@ if True:
 
 print(filteredText)
 
+# following code adapted for word cloud repo
 # read the mask image
-# taken from
-# http://www.stencilry.org/stencils/movies/alice%20in%20wonderland/255fk.jpg
 alice_mask = np.array(Image.open(path.join(d, "csgo_mask.jpg")))
 imageHeight = alice_mask.shape[0]
 
+# These are the words I've personally needed to block
 stopwords = set(STOPWORDS)
 stopwords.add("said")
 stopwords.add("ready")
@@ -118,6 +118,7 @@ stopwords.add("krajliwtf")
 stopwords.add("pitou")
 stopwords.add("zycsell")
 stopwords.add("co")
+stopwords.add("apet")
 for l in string.ascii_lowercase:
     stopwords.add(l)
 
@@ -139,6 +140,6 @@ wc.generate(filteredText)
 wc.recolor(color_func=grey_color_func, random_state=3)
 
 # store to file
-wc.to_file(path.join(d, "csgo_word_cloud.png"))
+wc.to_file(path.join(d, "word_cloud.png"))
 
 # What are CS players saying? Here's a word cloud of the most common words in game chat.
