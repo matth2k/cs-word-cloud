@@ -35,6 +35,9 @@ if __name__ == "__main__":
 
     cMatch = args.initMatch
     apiKey = args.apiKey
+    if apiKey == "TODO" or cMatch == "TODO":
+        print("Please provide a valid api key and match id")
+        sys.exit(1)
     count = 0
     while count < args.numMatches:
         print(f"{cMatch}", flush=True, end="\n")

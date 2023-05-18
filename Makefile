@@ -1,7 +1,7 @@
 
-APIKEY?=TODO
-INITMATCH?=TODO
-MATCH_COUNT=1000
+APIKEY?=TODO # Add server api key here from https://developers.faceit.com/
+INITMATCH?=TODO # Add any recent faceit match ID here 
+MATCH_COUNT=1000 # Number of demos to download
 
 all: word_cloud.png
 
