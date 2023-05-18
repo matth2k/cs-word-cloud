@@ -14,7 +14,8 @@ words.txt: matches.txt
 
 matches.txt:
 	rm -f $@
-	python3 scrapeGames.py -s $(INITMATCH) -k $(APIKEY) >> $@
+	@echo "This will take a while..."
+	python3 scrapeGames.py -s $(INITMATCH) -k $(APIKEY) -n $(MATCH_COUNT) | tee -a $@
 
 clean:
 	rm -f matches.txt words.txt word_cloud.png demos
