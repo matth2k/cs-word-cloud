@@ -21,4 +21,4 @@ matches.txt:
 	python3 scrapeGames.py -s $(INITMATCH) -k $(APIKEY) -n $(MATCH_COUNT) | tee -a $@
 
 clean:
-	rm -f matches.txt words.txt word_cloud.png demos cs-word-cloud
+	rm -rf matches.txt words.txt word_cloud.png demos cs-word-cloud
