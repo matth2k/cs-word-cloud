@@ -11,7 +11,12 @@ from wordcloud import WordCloud, STOPWORDS
 
 imageHeight = 0
 
-slurs = ["faggot", "nigger", "chink", "spic", "retard", "retarded", "nig", "gay"]
+slurs = [
+    "faggot",
+    "retard",
+    "retarded",
+    "gay",
+]  # There's definitely some more you will need to add, depending on how bad the language is in the demos
 swears = ["fuck", "shit", "damn", "fucking", "shitting"]
 colorDict = {
     "green": (0, 255, 0),
